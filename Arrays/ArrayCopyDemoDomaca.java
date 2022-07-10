@@ -5,14 +5,27 @@ public class ArrayCopyDemoDomaca {
         int[] copyFrom2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 133, 14};
         int[] copyTo2 = new int[7];
 
-        System.arraycopy(copyFrom, 2, copyTo, 0, 7);
-        for (int i : copyTo) {
+
+        ProcessTimer test1 = new ProcessTimer("Javovsky array copy"); // start merania casu
+        test1.startTimer();
+
+        System.arraycopy(copyFrom, 2, copyTo, 0, 7); // systemovy JAVA array copy
+
+        test1.stopTimerPrintResult(); // koniec merania casu
+
+        for (int i : copyTo) {                         // vypis array
             System.out.print(i + ",");
         }
-        System.out.println();
+           System.out.println();
 
-        arraycopy(copyFrom2, 2, copyTo2, 0, 7);
-        for (int i : copyTo) {
+        ProcessTimer test2 = new ProcessTimer("Moj array copy"); // start merania casu
+        test2.startTimer();
+
+
+        arraycopy(copyFrom2, 2, copyTo2, 0, 7); // moj array copy
+        test2.stopTimerPrintResult(); // koniec merania casu
+
+        for (int i : copyTo) {                  //vypis array
             System.out.print(i + ",");
         }
         System.out.println();
