@@ -2,7 +2,6 @@ package shapes;
 
 public abstract class Shape {
     private int color;
-
     public Shape() {
         this(0);
     }
