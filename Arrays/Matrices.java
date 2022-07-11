@@ -9,17 +9,18 @@ public class Matrices {
         int[][] dMatrix = {{79, 46, 31, 82}, {96, 85, 74, 52}, {97, 56, 54, 25}, {19, 37, 64, 28}};
         int[][] eMatrix = {{79, 46, 31, 82}, {96, 85, 74, 52}, {97, 56, 54, 25}, {19, 37, 64, 28}};
 
-        int[][] fMatrix = {{79, 46, 31}, {96, 85, 74}};
-        int[][] gMatrix = {{79, 46, 31}, {96, 85, 74}, {97, 56, 54}};
+        int[][] fMatrix = {{2, 3, 1}, {4, 3, 5}};
+        int[][] gMatrix = {{1,0,2}, {3,3,-1}, {-2,1,3}};
 
 
-        int[][] addition = addMatrices(aMatrix, bMatrix);
-        int[][] transposed = transpose(aMatrix);
-        int[][] multiplied = multiply(dMatrix, eMatrix);
+       // int[][] addition = addMatrices(aMatrix, bMatrix);
+       // int[][] transposed = transpose(aMatrix);
+        int[][] multiplied = multiply(fMatrix, gMatrix);
 
         //print matrix
-        printMatrix(aMatrix);
-        printMatrix(bMatrix);
+        printMatrix(fMatrix);
+        printMatrix(gMatrix);
+        printMatrix(multiplied);
     }
 
     private static int[][] addMatrices(int[][] matrixA, int[][] matrixB) {
@@ -51,21 +52,8 @@ public class Matrices {
         return transposed;
     }
 
+
     private static int[][] multiply(int[][] matrixA, int[][] matrixB) {
-        int[][] matrixC = new int[matrixA.length][matrixA[1].length];
-        //https://www.math.sk/skripta/node46.html
-        //vysledok bude v matrixC
-        for (int i = 0; i < matrixA.length; i++) {
-            for (int j = 0; j < matrixA[1].length; j++) {
-                matrixC[i][j] = matrixA[i][j] * matrixB[i][j];
-            }
-        }
-
-
-        return matrixC;
-    }
-
-    private static int[][] multiplyOpravene(int[][] matrixA, int[][] matrixB) {
         if (matrixA[0].length != matrixB.length) {
             return null;
         }
@@ -86,7 +74,13 @@ public class Matrices {
     }
 
     static int vynasobitRiadokSoStlpcom(int[][] a, int b, int[][] i, int j) {
-        return 0;
+        int sum=0;
+        for(int x=0; x<a[0].length;x++){
+            sum+=a[b][x]*i[x][j];
+
+        }
+
+        return sum;
 
 
     }
