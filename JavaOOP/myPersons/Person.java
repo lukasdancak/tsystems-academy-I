@@ -1,17 +1,22 @@
 package myPersons;
 
-public class Person {
-    private String name;
-    private int age;
+import cars.Car;
 
-    public Person(String name){
-        this.name=name;
+public class Person {
+    public static final String JAHODA = "Jahoda";
+    private String name; // = null;
+    private int age; // = 0;
+    private Car car;
+
+    public Person(String name) {
+        this(name, 5);
     }
 
     public Person(String name, int age) {
         this.name = name;
-        // check if age is valid
-        if(isValidAge(age)) {this.age = age;} //else {this.age=0;}
+        if(isValidAge(age)) {
+            this.age = age;
+        }
     }
 
     public String getName() {
@@ -23,29 +28,34 @@ public class Person {
     }
 
     public int getAge() {
-       return age;
+        return age;
     }
 
     public void setAge(int age) {
-        // check if age is valid
-        if(isValidAge(age)) {this.age = age;} //else {this.age=0;}
+        if(isValidAge(age)) {
+            this.age = age;
+        }
     }
 
-    private boolean isValidAge (int ageNew){
-        return ageNew >=0 && ageNew<=150;
+    public Car getCar() {
+        return car;
     }
 
-//    @Override
-//    public String toString() {
-//        return "MyPerson{}: "+this.getName()+" "+this.getAge() ;
-//    }
+    public void setCar(Car car) {
+        this.car = car;
+    }
 
+    private boolean isValidAge(int ageNew) {
+        return ageNew >= 0 && ageNew <= 150;
+    }
 
     @Override
     public String toString() {
+        if(this.getCar()!=null){this.getCar().start();}
         return "MyPerson{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                (car != null ? ", car=" + car : "") +
                 '}';
     }
 }

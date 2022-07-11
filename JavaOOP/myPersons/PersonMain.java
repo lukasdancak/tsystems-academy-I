@@ -1,5 +1,8 @@
 package myPersons;
 
+import cars.PersonalCar;
+import cars.Truck;
+
 public class PersonMain {
     public static void main(String[] args) {
 //      Person[] persons = {
@@ -23,12 +26,21 @@ public class PersonMain {
 //       System.out.println(person1);
 //       System.out.println(person2);
 
-        Student student1 = new Student("Jozef", 22, "56456");
+//        Student student1 = new Student("Jozef", 22, "56456");
 //        Employee employee1 = new Employee("Fero", 55, "dekan");
 //        System.out.println(student1);
 //        System.out.println(employee1);
 
-        System.out.println(student1 instanceof Student);
+        Student student1 = new Student("Jozef", 22, "56456");
+        Employee employee1 = new Employee("Fero", 55, "dekan");
+        Truck tatra = new Truck("Tatra");
+        PersonalCar  skoda = new PersonalCar("Skoda",5);
+        student1.setCar(tatra);
+        employee1.setCar(skoda);
+
+
+
+
 
 
     }
