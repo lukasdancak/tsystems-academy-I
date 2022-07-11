@@ -52,7 +52,7 @@ public class ArrayCopyDemoDomaca {
     }
 
     // bubble sort
-    private static void bubbleSort(int[] array) {
+     static void bubbleSort(int[] array) {
         int limit = array.length;
         int nextLimit = 0;
         boolean noSwap = false;
@@ -61,7 +61,7 @@ public class ArrayCopyDemoDomaca {
                 if (swapArraysCells(array, j)) {
                     noSwap = false;
                 } else {
-                    if (noSwap == false) {
+                    if (!noSwap) {
                         noSwap = true;
                         nextLimit = j + 1;
                     }
