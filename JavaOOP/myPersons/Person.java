@@ -2,7 +2,7 @@ package myPersons;
 
 import cars.Car;
 
-public class Person {
+public abstract class Person {
     public static final String JAHODA = "Jahoda";
     private String name; // = null;
     private int age; // = 0;
@@ -48,6 +48,11 @@ public class Person {
     private boolean isValidAge(int ageNew) {
         return ageNew >= 0 && ageNew <= 150;
     }
+    public boolean isCar() {
+        if(car==null){return false;} else {return true;}
+    }
+
+
 
     @Override
     public String toString() {
@@ -58,4 +63,11 @@ public class Person {
                 (car != null ? ", car=" + car : "") +
                 '}';
     }
+
+    public String print(){
+        if(this.isCar()){this.getCar().start();}
+        return this.toString();
+    }
+
+//    abstract public void print();
 }

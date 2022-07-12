@@ -38,6 +38,12 @@ public class PersonMain {
         student1.setCar(tatra);
         employee1.setCar(skoda);
 
+        tatra.setLoad("piesok");
+        ((Truck) student1.getCar()).setLoad("strk");
+
+        System.out.println( student1.print());
+        System.out.println(employee1.print());
+
 
 
 

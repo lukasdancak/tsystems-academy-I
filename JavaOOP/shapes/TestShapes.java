@@ -17,15 +17,16 @@ public class TestShapes {
 //        System.out.println("P3: " + point3.toString());
 
             // stvorec
-//        Square stvorec = new Square(5);
-//        stvorec.print();
-//        stvorec.setColor('#');
-//        System.out.println();
-//        stvorec.print();
+        Square stvorec = new Square(5);
+        stvorec.print();
+        stvorec.setColor('#');
+        System.out.println();
+        stvorec.print();
+        System.out.println();
 
         //obdlznik
-//        Rectangle obdlznik = new Rectangle(7,4,'X');
-//        obdlznik.print();
+        Rectangle obdlznik = new Rectangle(7,4,'X');
+        obdlznik.print();
 
         //trojuholnik
         Triangle trojuholnik = new Triangle(8);
