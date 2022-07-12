@@ -2,7 +2,8 @@ package myPersons;
 
 import cars.Car;
 
-public abstract class Person {
+public  class Person implements Comparable<Person> {
+
     public static final String JAHODA = "Jahoda";
     private String name; // = null;
     private int age; // = 0;
@@ -69,5 +70,12 @@ public abstract class Person {
         return this.toString();
     }
 
-//    abstract public void print();
+
+    @Override
+    public int compareTo(Person o) {
+        if(this.getName().compareTo(o.getName())==0){
+            return this.getAge() - o.getAge();
+        }
+        return this.getName().compareTo(o.getName());
+    }
 }

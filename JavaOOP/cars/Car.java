@@ -1,6 +1,6 @@
 package cars;
 
-public class Car {
+public class Car implements Comparable<Car> {
     private String brand;
     private boolean started;
 
@@ -33,5 +33,11 @@ public class Car {
         return brand + '(' +
                 (started ? "started" : "stopped") +
                 ')';
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        if(o==null){return -1;}
+        return this.getBrand().compareTo(o.getBrand());
     }
 }
