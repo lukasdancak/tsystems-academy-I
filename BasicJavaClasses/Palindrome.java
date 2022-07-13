@@ -21,9 +21,9 @@ public class Palindrome {
 
 	public static void isPalindrome (String input){
 		if (input.equalsIgnoreCase(getReverseStringCaseSensitive(input))){
-			System.out.printf("Vyraz %s je PALINDROME %n", input);
+			System.out.printf("Vyraz \"%s\" je PALINDROME %n", input);
 		} else {
-			System.out.printf("Vyraz %s nie je PALINDROME %n", input);
+			System.out.printf("Vyraz \"%s\" nie je PALINDROME %n", input);
 		}
 	}
 }
