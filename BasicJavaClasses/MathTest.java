@@ -7,5 +7,6 @@ public class MathTest {
 		System.out.println(Math.pow(d, 3.0));
 		
 		System.out.println(Math.sqrt(9.0));
+
 	}
 }

@@ -33,17 +33,16 @@ public class Rectangle extends Shape{
 
     @Override
     public String toString() {
-        String s ="";
+        StringBuilder s=new StringBuilder("");
         for(int i=0;i<this.getHeight();i++){
             for(int j=0;j<this.getWidth();j++){
-                s+=(char)this.getColor();
-                s+="  ";
+                s.append((char)this.getColor());
+                s.append("  ");
             }
-            s+="%n";
+            s.append("%n");
         }
 
-
-        return s;
+        return s.toString();
     }
 
     @Override
