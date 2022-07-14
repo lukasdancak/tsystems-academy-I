@@ -1,5 +1,5 @@
 public class Palindrome {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //		String palindrome = "jarko";
 //		int len = palindrome.length();
 //		StringBuilder dest = new StringBuilder(len);
@@ -8,15 +8,12 @@ public class Palindrome {
 //		}
 //		System.out.println(dest.toString());
 
-		isPalindrome("Kajak a kajak");
-		isPalindrome("Toto saS Otot");
-		isPalindrome("Miska (nie je)");
+        isPalindrome("Kajak a kajak");
+        isPalindrome("Toto saS Otot");
+        isPalindrome("Miska (nie je)");
 
 
-
-	}
-
-
+    }
 
 
 //	public static String getReverseStringCaseSensitive(String input){
@@ -24,11 +21,11 @@ public class Palindrome {
 //		return dest.reverse().toString();
 //	}
 
-	public static void isPalindrome (String input){
-		if (input.equalsIgnoreCase(	new StringBuilder(input).reverse().toString())) {
-			System.out.printf("Vyraz \"%s\" je PALINDROME %n", input);
-		} else {
-			System.out.printf("Vyraz \"%s\" nie je PALINDROME %n", input);
-		}
-	}
+    public static void isPalindrome(String input) {
+        if (input.equalsIgnoreCase(new StringBuilder(input).reverse().toString())) {
+            System.out.printf("Vyraz \"%s\" je PALINDROME %n", input);
+        } else {
+            System.out.printf("Vyraz \"%s\" nie je PALINDROME %n", input);
+        }
+    }
 }
