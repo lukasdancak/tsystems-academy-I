@@ -12,15 +12,20 @@ public class Palindrome {
 		isPalindrome("Toto saS Otot");
 		isPalindrome("Miska (nie je)");
 
+
+
 	}
 
-	public static String getReverseStringCaseSensitive(String input){
-		StringBuilder dest= new StringBuilder(input);
-		return dest.reverse().toString();
-	}
+
+
+
+//	public static String getReverseStringCaseSensitive(String input){
+//		StringBuilder dest= new StringBuilder(input);
+//		return dest.reverse().toString();
+//	}
 
 	public static void isPalindrome (String input){
-		if (input.equalsIgnoreCase(getReverseStringCaseSensitive(input))){
+		if (input.equalsIgnoreCase(	new StringBuilder(input).reverse().toString())) {
 			System.out.printf("Vyraz \"%s\" je PALINDROME %n", input);
 		} else {
 			System.out.printf("Vyraz \"%s\" nie je PALINDROME %n", input);
