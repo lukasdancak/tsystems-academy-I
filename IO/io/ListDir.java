@@ -1,6 +1,8 @@
 package io;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListDir {
     public static void main(String[] args) {
@@ -22,5 +24,9 @@ public class ListDir {
         } else {
 //            System.err.printf("File %s is not directory", dir);
         }
+    }
+
+    private static List<File> filter(String name){
+        return new ArrayList<File>(); // DU
     }
 }
